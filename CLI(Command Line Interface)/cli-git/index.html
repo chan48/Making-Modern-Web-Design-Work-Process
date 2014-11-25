@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+<meta charset="UTF-8">
+<title>명령어 기반 인터페이스로 Git 사용하기</title>
+</head>
+<body>
+	<h1>Git Command List</h1>
+	<dl>
+		<dt>git init</dt>
+		<dd>Git 저장소 초기화</dd>
+		<dt>git status</dt>
+		<dd>Git 상태(새롭게 추가되거나, 수정된 내용) 확인</dd>
+		<dt>git add [file, *]</dt>
+		<dd>파일 버전관리 스냅샷(Snapshots) 생성</dd>
+		<dt>git commit -m "메모 내용"</dt>
+		<dd>영구적으로 버전관리 스냅샷 파일 기록</dd>
+		<dt>git commit -a -m "메모 내용"</dt>
+		<dd>스테이지 상태 건너띄고 커밋</dd>
+		<dt>git diff</dt>
+		<dd>스테이지(Staged)되지 않은 변경사항을 화면에 출력</dd>
+		<dt>git diff --staged</dt>
+		<dd>스테이지된 이후, 변경사항을 화면에 출력</dd>
+		<dt>git log</dt>
+		<dd>커밋(Commit)된 결과를 화면에 출력</dd>
+		<dt>git reset HEAD {file}</dt>
+		<dd>파일 언스테이지드(Unstaged)</dd>
+		<dt>git reset HEAD^</dt>
+		<dd>최근 커밋 취소</dd>
+		<dt>git checkout -- {file}</dt>
+		<dd>파일 이전 커밋 스냅샷 기록으로 복귀</dd>
+		<dt>git remote add {원격 저장소 이름} "저장소 경로"</dt>
+		<dd>원격 저장소 등록</dd>
+		<dt>git remote</dt>
+		<dd>원격 저장소 이름 출력</dd>
+		<dt>git remote -v</dt>
+		<dd>원격 저장소 정보 출력</dd>
+		<dt>git push {원격 저장소 이름} {브랜치 이름}</dt>
+		<dd>로컬 Git 저장소 데이터 원격 저장소로 업로드</dd>
+	</dl>
+</body>
+</html>
