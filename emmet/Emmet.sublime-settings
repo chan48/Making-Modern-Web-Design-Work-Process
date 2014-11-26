@@ -1,0 +1,28 @@
+{
+	"snippets": {
+		// 주언어, 인코딩 설정
+		"variables": {
+			"lang": "ko",
+			"locale": "ko-KR",
+			"charset": "UTF-8"
+		},
+		// HTML 사용자 정의 설정
+		"html": {
+			// 스니펫 
+			"snippets": {
+				"nav+": "nav[id=\"${1:gnb}\"]>ul>li*${2:3}>a$3",
+				"contentinfo": "footer[role=contentinfo]>p>{Copyright }+a[href=http://${1:yamoo9.net}]{${1:yamoo9.net}}+{. All rights reserved.}"
+			},
+			// 축약 표현식
+			"abbreviations": {
+				// "table+": "table[border=1 id=]>caption+tr>th"
+			}
+		}
+	},
+	// Emmet 확장 경로 설정
+	"extensions_path": "c://emmet",
+	// Lorem Ipsum 기본 언어 설정: 한글
+	"preferences": {
+		"lorem.defaultLang": "ko"
+	}
+}
