@@ -15,7 +15,11 @@
 			},
 			// 축약 표현식
 			"abbreviations": {
-				// "table+": "table[border=1 id=]>caption+tr>th"
+				// Emmet 기본 table+ 덮어쓰기
+				"table+": "table[border=1 id=]>caption+tr>th",
+				// 신규 축약 코드 생성
+				"aimg": "a>img",
+				"meta:seo": "meta[name=description content=$1]+meta[name=keywords content=$2]"
 			}
 		}
 	},
