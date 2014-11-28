@@ -47,12 +47,37 @@
 				"style:4": "style[type=text/css]",
 				"script:4": "script[type=text/javascript]"
 			}
+		},
+		// CSS 사용자 정의 설정
+		"css": {
+			// 스니펫
+			"snippets": {
+				"reset-space": "m0+bd0+p0",
+				"reset-list": "lisn+pl0"
+			}
 		}
 	},
 	// Emmet 확장 경로 설정
 	"extensions_path": "c://emmet",
-	// Lorem Ipsum 기본 언어 설정: 한글
+	
 	"preferences": {
-		"lorem.defaultLang": "ko"
+		// Lorem Ipsum 기본 언어 설정: 한글(ko), 영어(en), 러시아어(ru)
+		"lorem.defaultLang": "ko",
+
+		// CSS Hex 컬러 단축(3 Dgit) 설정
+		"css.color.short": false,
+		
+		// CSS 벤더 프리픽스 자동 추가 설정
+		// "css.autoInsertVendorPrefixes": false,
+		
+		// CSS 그레디언트 대체 컬러 추가 설정
+		"css.gradient.fallback": true,
+		
+		// CSS 그레디언트 구형 Webkit 문법 추가 설정
+		// "css.gradient.oldWebkit": true,
+		
+		// 영역 시작/끝 지점에 코멘트 추가 설정
+		"filter.commentBefore": "<!-- 시작: <%= attr('id', '#')%><%= attr('class', '.')%> -->\n",
+		"filter.commentAfter": "\n<!-- 끝: <%= attr('id', '#')%><%= attr('class', '.')%> -->"
 	}
 }
