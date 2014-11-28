@@ -1,0 +1,35 @@
+#page {
+	width: 1200px;
+	margin: 0 auto;
+	padding: 0 10px 0 10px;
+}
+
+.grid-divider-2 {
+	float: left;
+	/* Emmet 수학식 계산 액션 */
+	width: (1200-(10*2))/2px;
+}
+
+.rotate-45 {
+	/* Emmet 벤더 프리픽스 값 동시 변경 액션 */
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+.number-actions {
+	/* Emmet 1, 0.1, 10 숫자 값 증가/감소 액션 */
+	padding: 10px;
+	font-size: 1.2rem;
+	z-index: 20;
+}
+
+.logo-yamoo9net {
+	width: 120px;
+	height: 90px;
+	/* Emmet data:URL 변경 액션 */
+	background: url("../images/logo-yamoo9.net.png");
+	text-indent: -9999em;
+}
+
