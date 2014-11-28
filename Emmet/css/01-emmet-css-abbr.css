@@ -1,0 +1,59 @@
+body {
+	/* CSS 단위 */
+	m0
+	p10
+	pb1e
+	fz100p
+}
+
+aside {
+	/* 단위 없는 속성 */
+	lh1.5
+	fw300
+	z10
+	o.3
+}
+
+main {
+	/* CSS 16진수 컬러 */
+	c#1
+	btc#cd
+	bg#fe2
+}
+
+section {
+	/* !important 변경자 */
+	bg#f!+c#0!
+}
+
+.fuzzy-search {
+	/* 미완성 속성 코드 탐색 기능 */
+	fr
+	ovs
+	anim
+}
+
+.user-defined-snippets {
+	/* 사용자 정의 CSS 스니펫 코드 */
+	reset-space
+	reset-list
+}
+
+.vender-prefix {
+	/* 웹 브라우저 벤더 프리픽스 */
+	perspective
+	tr-ry
+	trfs
+}
+
+.rounded {
+	/* 웹 브라우저 벤더 프리픽스 - 직접 설정 */
+	bdrs
+	-bdrs
+	-mws-bdrs
+}
+
+.lg {
+	/* Emmet - lg() 함수 */
+	lg(top, #9681f8 20%, #68b4ec 40%, #f95bba)
+}

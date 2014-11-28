@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>Emmet: CSS 선택자 축약 표현식을 활용한 HTML 코드 생성</title>
+</head>
+<body>
+	
+	<!--
+		시안용 더미 텍스트(Lorem Ipsum)를 생성
+	-->
+	<!-- p*2>lorem12 -->
+	<p>쉬지 사명으로, 더미텍스트 젊음의 흐르는 해도 쿵쿵대는 어디에나 다 한글 피어나는 들리는!</p>
+	<p>청춘 청춘의, 숨소리가 흐르는 쉬지 햇볕처럼 꽃처럼 가슴을, 소리 거추장스런 쿵쿵대는 젊음의.</p>
+	<!-- p[lang=ru]>loremru -->
+	<p lang="ru">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Текст до первую заглавных они необходимыми даже это грустный семантика, силуэт агенство злых моей текстов послушавшись своего живет, домах. Алфавит.</p>
+	<!-- p*2>lorem8 -->
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+	<p>Accusamus culpa cum mollitia eligendi, fugit, non sapiente.</p>
+
+
+
+	<!--
+		{ } 연산자를 사용하여 TEXT 생성
+	-->
+	<!-- p>{보다 자세한 내용은 }+a[title="사내 직장예절 매뉴얼"]{매뉴얼}+{을 참고하세요.} -->
+	<p>보다 자세한 내용은 <a href="" title="사내 직장예절 매뉴얼">매뉴얼</a>을 참고하세요.</p>
+	<!--
+		속성 연산자 #, ., [], $, @-를 사용하여 HTML 코드 구조 생성
+	-->
+	<!-- section#news>article.report-$@-17*4 -->
+	<section id="news">
+		<article class="report-20"></article>
+		<article class="report-19"></article>
+		<article class="report-18"></article>
+		<article class="report-17"></article>
+	</section>
+	<!-- section#news>article.report-$@17*4 -->
+	<section id="news">
+		<article class="report-17"></article>
+		<article class="report-18"></article>
+		<article class="report-19"></article>
+		<article class="report-20"></article>
+	</section>
+	<!-- ul>li[data-item-numbering="N-$$@-"]*10 -->
+	<ul>
+		<li data-item-numbering="N-10"></li>
+		<li data-item-numbering="N-09"></li>
+		<li data-item-numbering="N-08"></li>
+		<li data-item-numbering="N-07"></li>
+		<li data-item-numbering="N-06"></li>
+		<li data-item-numbering="N-05"></li>
+		<li data-item-numbering="N-04"></li>
+		<li data-item-numbering="N-03"></li>
+		<li data-item-numbering="N-02"></li>
+		<li data-item-numbering="N-01"></li>
+	</ul>
+	<!-- ul>li[data-item-numbering="N-$$"]*10 -->
+	<ul>
+		<li data-item-numbering="N-01"></li>
+		<li data-item-numbering="N-02"></li>
+		<li data-item-numbering="N-03"></li>
+		<li data-item-numbering="N-04"></li>
+		<li data-item-numbering="N-05"></li>
+		<li data-item-numbering="N-06"></li>
+		<li data-item-numbering="N-07"></li>
+		<li data-item-numbering="N-08"></li>
+		<li data-item-numbering="N-09"></li>
+		<li data-item-numbering="N-10"></li>
+	</ul>
+	<!-- dl.definition>(dt.term-$+dl.desc-$)*3 -->
+	<dl class="definition">
+		<dt class="term-1"></dt>
+		<dl class="desc-1"></dl>
+		<dt class="term-2"></dt>
+		<dl class="desc-2"></dl>
+		<dt class="term-3"></dt>
+		<dl class="desc-3"></dl>
+	</dl>
+	<!-- ol[id="ranking" class="chart"]>li*3 -->
+	<ol id="ranking" class="chart">
+		<li></li>
+		<li></li>
+		<li></li>
+	</ol>
+	<!-- .ht-links>a[href="http://ht-link.com" target="_blank"]*2 -->
+	<div class="ht-links">
+		<a href="http://ht-link.com" target="_blank"></a>
+		<a href="http://ht-link.com" target="_blank"></a>
+	</div>
+	<!-- #app>#header+main.page+#footer.siteinfo -->
+	<div id="app">
+		<div id="header"></div>
+		<main class="page"></main>
+		<div id="footer" class="siteinfo"></div>
+	</div>
+
+
+
+	<!--
+		중첩 연산자 >, +, ^, ()를 사용하여 HTML 코드 구조 생성
+	-->
+	<!-- nav>ul>li*7>a>img -->
+	<nav>
+		<ul>
+			<li><a href=""><img src="" alt=""></a></li>
+			<li><a href=""><img src="" alt=""></a></li>
+			<li><a href=""><img src="" alt=""></a></li>
+			<li><a href=""><img src="" alt=""></a></li>
+			<li><a href=""><img src="" alt=""></a></li>
+			<li><a href=""><img src="" alt=""></a></li>
+			<li><a href=""><img src="" alt=""></a></li>
+		</ul>
+	</nav>	
+	<!-- header+(nav>ul>li>a)+main+footer -->
+	<header></header>
+	<nav>
+		<ul>
+			<li><a href=""></a></li>
+		</ul>
+	</nav>
+	<main></main>
+	<footer></footer>
+	<!-- header+section>article>p>em^^^footer -->
+	<header></header>
+	<section>
+		<article>
+			<p><em></em></p>
+		</article>
+	</section>
+	<footer></footer>
+	<!-- header>h1+p^nav+main+footer -->
+	<header>
+		<h1></h1>
+		<p></p>
+	</header>
+	<nav></nav>
+	<main></main>
+	<footer></footer>
+	<!-- header>h1+p+nav+main+footer -->
+	<header>
+		<h1></h1>
+		<p></p>
+		<nav></nav>
+		<main></main>
+		<footer></footer>
+	</header>
+	<!-- header+main+footer -->
+	<header></header>
+	<main></main>
+	<footer></footer>
+	<!-- nav>ul>li>a>img -->
+	<nav>
+		<ul>
+			<li><a href=""><img src="" alt=""></a></li>
+		</ul>
+	</nav>
+	
+
+
+	<!--
+		요소 이름으로 HTML 코드 생성
+	-->
+	<!-- section -->
+	<section></section>
+	<!-- article -->
+	<article></article>
+	<!-- nav -->
+	<nav></nav>
+	<!-- aside -->
+	<aside></aside>
+
+</body>
+</html>

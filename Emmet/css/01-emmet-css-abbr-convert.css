@@ -1,0 +1,85 @@
+body {
+	/* CSS 단위 */
+	margin: 0;
+	padding: 10px;
+	padding-bottom: 1em;
+	font-size: 100%;
+}
+
+aside {
+	/* 단위 없는 속성 */
+	line-height: 1.5;
+	font-weight: 300;
+	z-index: 10;
+	opacity: .3;
+}
+
+main {
+	/* CSS 16진수 컬러 */
+	color: #111111;
+	border-top-color: #cdcdcd;
+	background: #ffee22;
+}
+
+section {
+	/* !important 변경자 */
+	background: #ffffff !important;
+	color: #000000 !important;
+}
+
+.fuzzy-search {
+	/* 미완성 속성 코드 탐색 기능 */
+	float: right;
+	overflow: scroll;
+	-webkit-animation: ;
+	-o-animation: ;
+	animation: ;
+}
+
+.user-defined-snippets {
+	/* 사용자 정의 CSS 스니펫 코드 */
+	margin: 0;
+	border: 0;
+	padding: 0;
+	list-style: none;
+	padding-left: 0;
+}
+
+.vender-prefix {
+	/* 웹 브라우저 벤더 프리픽스 */
+	-webkit-perspective: ;
+	-moz-perspective: ;
+	-ms-perspective: ;
+	perspective: ;
+	-webkit-transform: rotateY(angle);
+	-ms-transform: rotateY(angle);
+	-o-transform: rotateY(angle);
+	transform: rotateY(angle);
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	-ms-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+}
+
+.rounded {
+	/* 웹 브라우저 벤더 프리픽스 - 직접 설정 */
+	border-radius: ;
+	-webkit-border-radius: ;
+	-moz-border-radius: ;
+	-ms-border-radius: ;
+	-o-border-radius: ;
+	border-radius: ;
+	-moz-border-radius: ;
+	-webkit-border-radius: ;
+	-ms-border-radius: ;
+	border-radius: ;
+}
+
+.lg {
+	/* Emmet - lg() 함수 */
+	background-color: #9681f8;
+	background-image: -webkit-linear-gradient(#9681f8 20%, #68b4ec 40%, #f95bba);
+	background-image: -o-linear-gradient(#9681f8 20%, #68b4ec 40%, #f95bba);
+	background-image: linear-gradient(#9681f8 20%, #68b4ec 40%, #f95bba);
+}
+
