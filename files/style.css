@@ -1,1 +1,7 @@
-#nodejs { margin:0; padding: 0; }
+.watchFile {
+	margin:0;
+	padding: 0;
+	color: #8BB4F8;
+	border-radius: 3px;
+	box-sizing: border-box;
+}
