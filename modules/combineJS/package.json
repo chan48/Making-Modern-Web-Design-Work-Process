@@ -1,11 +1,8 @@
 {
-  "name": "combineJS",
-  "version": "0.0.1",
+  "name": "combinejs",
+  "version": "0.0.2",
   "description": "combineJS 모듈은 Javascript 파일을 병합(압축)합니다.",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "keywords": [
     "combine",
     "merge",
@@ -14,9 +11,9 @@
     "minify",
     "compress"
   ],
-  "author": "yamoo9",
+  "author": "yamoo9 <yamoo9@naver.com> (http://yamoo9.net)",
   "license": "ISC",
-  "devDependencies": {
+  "dependencies": {
     "minify": "^1.4.0"
   }
 }

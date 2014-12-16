@@ -7,4 +7,4 @@ var combineJS = require('./modules/combineJS');
  * 전달인자 2: 병합되어 생성된 파일 경로(문자열)
  * 전달인자 3: 병합할 파일을 압축할지 유무 설정(불린) ※ 선택 옵션
  */
-combineJS(['./readFile.js', './writeFile.js'], './jsCombine.js', true);
+combineJS(['./readFile.js', './writeFile.js', './watchFile.js'], './jsCombine.js', true);
