@@ -4,7 +4,7 @@ function prevEl(el) {
 		el = el.previousElementSibling;
 	} else {
 		do { el = el.previousSibling; }
-		while(el && el.nodeType != 1)
+		while(el && el.nodeType != 1);
 	}
 	return el;
 }
