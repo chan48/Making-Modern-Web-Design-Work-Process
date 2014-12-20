@@ -1,0 +1,11 @@
+{
+  "name": "gulp_project_book_demo",
+  "version": "0.0.0",
+  "description": "Gulp.js 이해를 돕기 위한 책 예제를 다룹니다.",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^3.8.10",
+    "gulp-concat": "^2.4.2"
+  },
+  "author": "yamoo9 <yamoo9@naver.com> (http://yamoo9.net)"
+}
