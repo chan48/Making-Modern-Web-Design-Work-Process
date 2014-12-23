@@ -16,9 +16,8 @@ CSS/Javascript 파일의 문법 검사, 병합, 압축을 수행하는 Gulp 프�
 
 =
 ### NPM 모듈 설치
-<p>내려 받은 ZIP 파일 압축을 푼 후, Git Bash에서 압축을 푼 디렉토리로<br>
-<code>cd</code> 명령을 이용하여 이동합니다. 그리고 NPM 설치 명령을 입력 실행하여<br>
-<strong>프로젝트가 의존하는 개발 모듈(devDependencies)</strong>을 다운로드 받습니다.</p>
+<p>내려 받은 ZIP 파일 압축을 푼 후, Git Bash에서 압축을 푼 디렉토리로 <code>cd</code> 명령을 이용하여 이동합니다.<br>
+그리고 NPM 설치 명령을 입력 실행하여 <strong>프로젝트가 의존하는 개발 모듈(devDependencies)</strong>을 다운로드 받습니다.</p>
 ```
 $ npm install
 ```
@@ -27,7 +26,7 @@ $ npm install
 #### Gulp 프로젝트 명령어
 다운로드 받은 Gulp 프로젝트는 아래 명령어를 지원합니다.
 
-* `gulp` 또는 `gulp default` - 기본 업무로 'clean', 'styles', 'scripts', 'watch' 순으로 세부 업무가 실행됩니다.
+* `gulp` 또는 `gulp default` - 기본 업무로 clean > styles > scripts > watch 순으로 세부 업무가 실행됩니다.
 * `gulp watch` - 파일의 변경 내용을 지속적으로 관찰하여 관련 업무를 수행합니다.
 * `gulp clean` - 생성된 파일을 제거합니다.
 * `gulp styles` - CSS 문법 검사, 병합, 압축 과정을 수행하는 업무입니다.
