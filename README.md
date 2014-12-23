@@ -1,5 +1,6 @@
 ## 모던 웹 디자인 워크프로세스 - Gulp 활용 편
-CSS/Javascript 파일의 문법 검사, 병합, 압축을 수행하는 Gulp 프로젝트 책 예제입니다. 책을 읽고 내려 받아 사용해보세요.
+CSS/Javascript 파일의 문법 검사, 병합, 압축을 수행하는 Gulp 프로젝트 책 예제입니다.<br>
+책을 읽고 내려 받아 사용해보세요.
 
 =
 
@@ -9,13 +10,15 @@ CSS/Javascript 파일의 문법 검사, 병합, 압축을 수행하는 Gulp 프�
 
 =
 ### Node.js & NPM에 의존하는 프로젝트
-<p>프로젝트는 Node.js 환경에서 작동합니다. Node.js가 설치되어 있지 않다면 아래 링크로 이동하여 설치 파일을 내려 받습니다.</p>
+<p>프로젝트는 Node.js 환경에서 작동합니다. Node.js가 설치되어 있지 않다면<br>
+아래 링크로 이동하여 설치 파일을 내려 받습니다.</p>
 [Node.js 다운로드](http://nodejs.org/download/)
 
 =
 ### NPM 모듈 설치
-<p>내려 받은 ZIP 파일 압축을 푼 후, Git Bash에서 압축을 푼 디렉토리로 <code>cd</code> 명령을 이용하여 이동합니다.<br>
-그리고 NPM 설치 명령을 입력 실행하여 <strong>프로젝트가 의존하는 개발 모듈(devDependencies)</strong>을 다운로드 받습니다.</p>
+<p>내려 받은 ZIP 파일 압축을 푼 후, Git Bash에서 압축을 푼 디렉토리로<br>
+<code>cd</code> 명령을 이용하여 이동합니다. 그리고 NPM 설치 명령을 입력 실행하여<br>
+<strong>프로젝트가 의존하는 개발 모듈(devDependencies)</strong>을 다운로드 받습니다.</p>
 ```
 $ npm install
 ```
