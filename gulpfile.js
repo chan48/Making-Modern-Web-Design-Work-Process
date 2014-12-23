@@ -9,45 +9,18 @@ var gulp      = require('gulp'),
 		rename    = require('gulp-rename'),
 		gulpif    = require('gulp-if'),
 		del       = require('del'),
-		config    = require('./config.json');
-
-/**
- * 환경설정
- */
-// 검사, 병합, 압축 설정
-// var config = {
-// 		lint   : true,
-// 		concat : true,
-// 		uglify : true,
-// 		rename : false
-// };
-// // 파일 경로(Path) 설정
-// var path = {
-// 	css: {
-// 		src      : ['src/css/**/*.css', '!src/css/style.css'],
-// 		dest     : 'dist/css/',
-// 		filename : 'style.css'
-// 	},
-// 	js: {
-// 		src      : 'src/js/libs/**/*.js',
-// 		dest     : 'dist/js/',
-// 		filename : 'DOMlibrary.js'
-// 	}
-// };
+		config    = require('./config.json'); // 환경설정
 
 /**
  * 기본(Default) & 관찰(Watch) 업무 정의
  * clean > styles > scripts 순으로 업무 실행
  */
-// gulp.task('default', function() {
-// 	// 콘솔(Console)에 메시지 기록(Log)
-// 	console.log('gulp default 일이 수행되었습니다.');
-// });
-gulp.task('default', ['clean', 'styles', 'scripts']);
+// 기본 (Default) 업무
+gulp.task('default', ['clean', 'styles', 'scripts', 'watch']);
 
-// 지속적 관찰(Watch) 업무 정의
+// 지속적 관찰(Watch) 업무
 gulp.task('watch', ['clean'], function() {
-	gulp.watch(config.path.css.src, ['styles']);
+	gulp.watch(config.path.css.watchSrc, ['styles']);
 	gulp.watch(config.path.js.src, ['scripts']);
 });
 
@@ -100,45 +73,3 @@ gulp.task('scripts', function() {
 		.pipe(gulpif(config.rename, rename({suffix: '.min'})) )
 		.pipe(gulp.dest( config.path.js.dest ));
 });
-
-// gulp.task('scripts', ['js:hint', 'js:concat', 'js:uglify']);
-
-// JS문법 검사
-// gulp.task('js:hint', function() {
-// 	gulp.src( path.js.src )
-// 		.pipe(jshint())
-// 		.pipe(jshint.reporter('jshint-stylish'));
-// });
-// JS 병합
-// gulp.task('js:concat', function() {
-// 	gulp.src( path.js.src )
-// 		.pipe(concat( path.js.filename ))
-// 		.pipe(gulp.dest( path.js.dest ));
-// });
-// JS 압축
-// gulp.task('js:uglify', function() {
-// 	setTimeout(function () { // 0.2초 뒤에 실행
-// 		gulp.src( path.js.dest + path.js.filename )
-// 			.pipe(uglify())
-// 			.pipe(rename({suffix: '.min'}))
-// 			.pipe(gulp.dest( path.js.dest ));
-// 	}, 200);
-// });
-
-// gulp.task('scripts', function() {
-// 	gulp
-// 		// .src(['./src/domhelper-id.js', './src/domhelper-tag.js'])
-// 		// .src('./src/*.js')
-// 		// .src(['./src/domhelper-prevEl.js', './src/*.js'])
-// 		.src('src/js/libs/**/*.js')
-// 		.pipe(jshint())
-// 		.pipe(jshint.reporter('jshint-stylish'))
-// 		.pipe(concat('DOMlibrary.js'))
-// 		.pipe(gulp.dest('./dist'))
-// 		.pipe(uglify({
-// 			mangle: false,
-// 			// preserveComments: 'some' // 'all', 'some'
-// 		}))
-// 		.pipe(rename('DOMlibrary.min.js'))
-// 		.pipe(gulp.dest('./dist'));
-// });

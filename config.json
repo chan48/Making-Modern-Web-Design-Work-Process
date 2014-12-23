@@ -6,7 +6,8 @@
 
 	"path"   : {
 		"css": {
-			"src"      : ["src/css/**/*.css", "!src/css/style.css"],
+			"src"      : ["src/css/style.css"],
+			"watchSrc" : "src/css/**/*.css",
 			"dest"     : "dist/css/",
 			"filename" : "style.css"
 		},
