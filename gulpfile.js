@@ -7,26 +7,37 @@ var gulp      = require('gulp'),
 		uglify    = require('gulp-uglify'),
 		concat    = require('gulp-concat'),
 		rename    = require('gulp-rename'),
-		del       = require('del');
+		gulpif    = require('gulp-if'),
+		del       = require('del'),
+		config    = require('./config.json');
 
 /**
- * 파일 경로(Path) 환경설정
+ * 환경설정
  */
-var path = {
-	css: {
-		src      : 'src/css/style.css',
-		dest     : 'dist/css/',
-		filename : 'style.css'
-	},
-	js: {
-		src      : 'src/js/libs/**/*.js',
-		dest     : 'dist/js/',
-		filename : 'DOMlibrary.js'
-	}
-};
+// 검사, 병합, 압축 설정
+// var config = {
+// 		lint   : true,
+// 		concat : true,
+// 		uglify : true,
+// 		rename : false
+// };
+// // 파일 경로(Path) 설정
+// var path = {
+// 	css: {
+// 		src      : ['src/css/**/*.css', '!src/css/style.css'],
+// 		dest     : 'dist/css/',
+// 		filename : 'style.css'
+// 	},
+// 	js: {
+// 		src      : 'src/js/libs/**/*.js',
+// 		dest     : 'dist/js/',
+// 		filename : 'DOMlibrary.js'
+// 	}
+// };
 
 /**
- * 기본(Default) 업무 정의
+ * 기본(Default) & 관찰(Watch) 업무 정의
+ * clean > styles > scripts 순으로 업무 실행
  */
 // gulp.task('default', function() {
 // 	// 콘솔(Console)에 메시지 기록(Log)
@@ -34,11 +45,18 @@ var path = {
 // });
 gulp.task('default', ['clean', 'styles', 'scripts']);
 
+// 지속적 관찰(Watch) 업무 정의
+gulp.task('watch', ['clean'], function() {
+	gulp.watch(config.path.css.src, ['styles']);
+	gulp.watch(config.path.js.src, ['scripts']);
+});
+
 /**
  * 폴더/파일 제거
+ * NPM 설치 모듈: del
  */
 gulp.task('clean', function() {
-	del(['dist/*']);
+	del(['dist/css/*', 'dist/js/*']);
 });
 
 /**
@@ -47,39 +65,40 @@ gulp.task('clean', function() {
  * 문법 검사 > 병합 > 압축
  */
 gulp.task('styles', function() {
-	gulp.src( path.css.src )
+	gulp.src( config.path.css.src )
 		// 문법검사
-		.pipe(csslint( {'import': false} ))
-		.pipe(csslint.reporter())
+		.pipe( gulpif(config.lint, csslint(config.cssLintRules)) )
+		.pipe( gulpif(config.lint, csslint.reporter()) )
 		// 파일 병합
-		.pipe(concatcss( path.css.filename ))
+		.pipe( gulpif(config.concat, concatcss( config.path.css.filename )) ) 
 		// 압축하지 않은 파일 출력
-		.pipe(gulp.dest( path.css.dest ))
+		.pipe( gulpif(config.rename, gulp.dest( config.path.css.dest )) )
 		// 압축
-		.pipe(uglifycss())
+		.pipe( gulpif(config.uglify, uglifycss()) )
 		// 압축한 파일 이름 바꿔 출력
-		.pipe(rename({suffix: '.min'}))
-		.pipe(gulp.dest( path.css.dest ));
+		.pipe( gulpif(config.rename, rename({suffix: '.min'})) )
+		.pipe(gulp.dest( config.path.css.dest ));
 });
 
 /**
  * Javascript 업무
+ * NPM 설치 모듈: gulp-jslint, gulp-concat, gulp-uglify
  * 문법 검사 > 병합 > 압축
  */
 gulp.task('scripts', function() {
-	gulp.src( path.js.src )
+	gulp.src( config.path.js.src )
 		// 문법검사
-		.pipe(jshint())
-		.pipe(jshint.reporter('jshint-stylish'))
+		.pipe( gulpif(config.lint, jshint()) )
+		.pipe( gulpif(config.lint, jshint.reporter('jshint-stylish')) )
 		// 파일 병합
-		.pipe(concat( path.js.filename ))
+		.pipe( gulpif(config.concat, concat( config.path.js.filename )) )
 		// 압축하지 않은 파일 출력
-		.pipe(gulp.dest( path.js.dest ))
+		.pipe( gulpif(config.rename, gulp.dest( config.path.js.dest )) )
 		// 압축
-		.pipe(uglify())
+		.pipe( gulpif(config.uglify, uglify(config.jsUglifyOptions)) )
 		// 압축한 파일 이름 바꿔 출력
-		.pipe(rename({suffix: '.min'}))
-		.pipe(gulp.dest( path.js.dest ));
+		.pipe(gulpif(config.rename, rename({suffix: '.min'})) )
+		.pipe(gulp.dest( config.path.js.dest ));
 });
 
 // gulp.task('scripts', ['js:hint', 'js:concat', 'js:uglify']);

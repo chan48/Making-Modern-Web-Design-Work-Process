@@ -1,5 +1,5 @@
 /*! addEvent.js */
-addEvent = (function(){
+var addEvent = (function(){
 	if(window.addEventListener) {
 		return function(el, type, fn) {
 			el.addEventListener(type, fn, false);

@@ -6,5 +6,5 @@ function nextEl(el) {
 		do { el = el.nextSibling; }
 		while(el && el.nodeType != 1);
 	}
-	return el
+	return el;
 }
