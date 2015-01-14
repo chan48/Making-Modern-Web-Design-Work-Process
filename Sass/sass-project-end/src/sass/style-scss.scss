@@ -1,0 +1,13 @@
+@charset "utf-8";
+@import "parts/variables";
+@import "parts/mixins";
+@import "parts/mixins-scss";
+
+// 새로운 HTML5 요소 display: block 설정
+@include html5-block;
+// 내비게이션 ul 요소 초기화
+nav ul, #gnb ul, #lnb ul {
+	@include reset-list;
+	font-family: $myungjo;
+	color: $bg-color;
+}

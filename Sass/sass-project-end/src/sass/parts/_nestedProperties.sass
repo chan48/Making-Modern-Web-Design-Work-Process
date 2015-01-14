@@ -1,0 +1,16 @@
+/**--------------------------------------------
+ * Sass 중첩 속성(Nested Properties)
+ -------------------------------------------- */
+.container
+	margin:
+		left: auto
+		right: auto
+	width: 94rem
+	// 마이크로 클리어픽스(Micro Clearfix)
+	&::before, &::after
+		content: ''
+		display: table
+	&::after
+		clear: both
+	.lt-ie8 &
+		zoom: 1

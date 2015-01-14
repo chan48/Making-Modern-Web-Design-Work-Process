@@ -1,0 +1,19 @@
+// ----------------------
+// sass 문법 모드
+// ----------------------
+.sass-syntax
+	margin: 0
+	padding: 0
+	color: #333
+	background: #2e2e2e
+
+// ----------------------
+// scss 문법 모드
+// ----------------------
+.scss-syntax {
+	margin: 0;
+	padding: 0;
+	color: #333;
+	background: #2e2e2e;
+}
+

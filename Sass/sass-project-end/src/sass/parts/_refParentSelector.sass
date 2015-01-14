@@ -1,0 +1,14 @@
+/**--------------------------------------------
+ * Sass 부모 참조 선택자(Referencing Parent Selectors: &)
+ -------------------------------------------- */
+#page a
+	text-decoration: none
+	color: #069aea
+	&:hover
+		padding-bottom: 0.1rem
+		border-bottom: 1px dashed
+		color: #023855
+
+#page a
+	.rgba &
+		color: rgba(6, 154, 234, 0.8)

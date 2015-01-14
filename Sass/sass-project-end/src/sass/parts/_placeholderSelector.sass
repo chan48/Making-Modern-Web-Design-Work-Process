@@ -1,0 +1,17 @@
+/**--------------------------------------------
+ * Sass 대체 선택자(Placeholder Selector: %)
+ -------------------------------------------- */
+// 버튼 공통 모듈
+%button
+	background-color: #34ace0
+	font-weight: bold
+	color: #fff
+	padding: 5px
+// 체크아웃 버튼
+.button-checkout
+	@extend %button
+	background-color: #cecece
+// 체크인 버튼
+.button-checkin
+	@extend %button
+	background-color: #e769a2
