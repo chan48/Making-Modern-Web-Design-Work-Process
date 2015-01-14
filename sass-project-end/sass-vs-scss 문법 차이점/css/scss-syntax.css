@@ -1,0 +1,9 @@
+/* line 6, C:/Users/훈/Desktop/sass-project/src/sass/scss-syntax.scss */
+#page {
+  background: #47ABE0;
+  color: #0A3467; }
+
+/* line 11, C:/Users/훈/Desktop/sass-project/src/sass/scss-syntax.scss */
+#page nav ul {
+  list-style: none;
+  padding-left: 0; }

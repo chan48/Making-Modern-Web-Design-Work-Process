@@ -1,0 +1,25 @@
+=transition($args...)
+	-webkit-transition: $args
+	transition: $args
+
+// 전달인자가 설정된 믹스인
+=position($type:relative, $top:null, $left:null, $bottom:null, $right:null)
+	position: $type
+	top: $top
+	left: $left
+	bottom: $bottom
+	right: $right
+
+=size($width:null, $height:null)
+	width: $width
+	height: $height
+
+// 전달인자 설정이 없는 믹스인
+=reset-box-model
+	margin: 0
+	border: 0
+	padding: 0
+
+=reset-table
+	border-collapse: collapse
+	border-spacing: 0

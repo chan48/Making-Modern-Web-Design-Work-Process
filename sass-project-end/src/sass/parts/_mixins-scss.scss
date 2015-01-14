@@ -1,0 +1,10 @@
+@mixin reset-list {
+	padding-left: 0;
+	list-style: none;
+}
+
+@mixin html5-block {
+	section, article, nav, aside, header, footer {
+		display: block;
+	}
+}

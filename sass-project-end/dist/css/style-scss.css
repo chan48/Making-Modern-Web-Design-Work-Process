@@ -1,0 +1,11 @@
+@charset "utf-8";
+section, article, nav, aside, header, footer {
+  display: block;
+}
+
+nav ul, #gnb ul, #lnb ul {
+  padding-left: 0;
+  list-style: none;
+  font-family: "Nanum Myungjo", Gulim, Serif;
+  color: #423406;
+}
