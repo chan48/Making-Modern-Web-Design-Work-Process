@@ -1,0 +1,12 @@
+/* line 3, C:/Users/훈/Desktop/susy-project-begin/src/sass/style.sass */
+body {
+  max-width: 940px;
+  margin-right: auto; 
+  margin-left: auto;
+}
+/* line 12, C:/Users/훈/Desktop/susy-project-begin/src/sass/susy/susy/output/support/clearfix */
+body:after {
+  display: block;
+  clear: both; 
+  content: " ";
+}
