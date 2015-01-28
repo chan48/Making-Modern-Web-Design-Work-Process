@@ -24,14 +24,14 @@ include ../_parts/_docHead
 				if CDN
 					link(rel="stylesheet", href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/"+fontawesome_ver+"/css/font-awesome.min.css")
 				else
-					link(rel="stylesheet", href="fontawesome/font-awesome.min.css")
+					link(rel="stylesheet", href="css/fontawesome/css/font-awesome.min.css")
 		//- 스크립트(head)
 		block headScripts
 			if modernizr
 				if CDN
 					script(src="//cdnjs.cloudflare.com/ajax/libs/modernizr/"+modernizr_ver+"/modernizr.min.js")
 				else
-					script(src="js/libs/modernizr.js")
+					script(src="js/libs/modernizr/modernizr.js")
 			if detectizr
 				if CDN
 					script(src="//cdnjs.cloudflare.com/ajax/libs/detectizr/"+detectizr_ver+"/detectizr.min.js")
@@ -39,7 +39,7 @@ include ../_parts/_docHead
 					script(src="js/libs/detectizr/dist/detectizr.min.js")
 				//- 사용법은 .ref-detectizr 문서 참고
 				script.
-					Modernizr.Detectizr.detect();
+					//- Modernizr.Detectizr.detect();
 			if jquery
 				if CDN
 					script(src="//ajax.googleapis.com/ajax/libs/jquery/"+jquery_ver+"/jquery.min.js")
