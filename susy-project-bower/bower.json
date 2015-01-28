@@ -41,7 +41,7 @@
     "fontawesome": [
       "css/**",
       "fonts/**",
-      "scss/**"
+      "sass/**"
     ]
   }
 }

@@ -16,7 +16,7 @@ module.exports = function() {
 			},
 			fontawesome: {
 				src: bower_path + 'fontawesome/**',
-				dest: source + 'sass/fontawesome'
+				dest: development + 'css/fontawesome'
 			},
 			others: {
 				src: [

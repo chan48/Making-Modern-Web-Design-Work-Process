@@ -30,7 +30,7 @@ coffee       = require 'gulp-coffee'           # CoffeeScript → Javascript
 # Gulp 업무(Tasks): [default, watch]
 # ------------------------------------------------------------------------
 # 기본
-gulp.task 'default', ['clean', 'preen', 'bower:copy'], (cb)->
+gulp.task 'default', ['clean', 'preen:bower'], (cb)->
 	runSequence 'connect', ['jade', 'sass', 'coffee'], 'watch', cb
 
 # 변경사항 관찰
@@ -53,6 +53,10 @@ gulp.task 'connect', connect.server(config.SERVER)
 
 # 제거
 gulp.task 'clean', del.bind(null, config.del)
+
+# preen → bower:copy 단축 업무
+gulp.task 'preen:bower', ->
+	runSequence 'preen', 'bower:copy'
 
 # Bower 패키지에서 필요한 파일만 골라내기(Preen)
 gulp.task 'preen', (cb)->
