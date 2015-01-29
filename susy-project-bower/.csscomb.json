@@ -231,7 +231,7 @@
 		"nav-down",
 		"nav-left",
 
-"-webkit-border-radius",
+		"-webkit-border-radius",
 		"-moz-border-radius",
 		"border-radius",
 		"-webkit-border-top-left-radius",
