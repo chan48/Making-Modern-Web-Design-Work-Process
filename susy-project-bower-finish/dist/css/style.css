@@ -1,0 +1,182 @@
+@import "http://fonts.googleapis.com/earlyaccess/nanumgothic.css";
+html {
+  overflow-y: visible;
+  font-size: 10px;
+}
+
+body {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+  font: 13px/1.5 "Nanum Gothic", Dotum, Sans-Serif;
+  letter-spacing: -0.02em;
+  word-spacing: 0.06em;
+  color: #585858;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  line-height: 1.4;
+  letter-spacing: -0.04em;
+}
+
+.box {
+  height: 12rem;
+  margin-bottom: 1rem;
+  font-weight: 900;
+  text-shadow: 0 1px 0 #3F3F3F;
+  text-align: center;
+  line-height: 12rem;
+  background: -webkit-linear-gradient(#EFBB1D, #F98844) left repeat;
+  background: linear-gradient(#EFBB1D, #F98844) left repeat;
+  color: #fff;
+}
+
+.box:nth-child(2n) {
+  background: -webkit-linear-gradient(#4A89F2, #854AF2) left repeat;
+  background: linear-gradient(#4A89F2, #854AF2) left repeat;
+}
+
+/* 모바일 퍼스트(Mobile First) */
+@media (max-width: 719px) {
+  body {
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  body:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+
+  .box2 {
+    width: 48.27586%;
+    float: left;
+    margin-right: 3.44828%;
+  }
+
+  .box3 {
+    width: 48.27586%;
+    float: right;
+    margin-right: 0;
+  }
+
+  .box4 {
+    clear: both;
+  }
+
+  .box5 {
+    width: 48.27586%;
+    float: right;
+    margin-left: 3.44828%;
+  }
+
+  .box6 {
+    width: 48.27586%;
+    float: left;
+    margin-left: 0;
+  }
+}
+/* 태블릿(Tablet) */
+@media (min-width: 720px) and (max-width: 1024px) {
+  body {
+    max-width: 86%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  body:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+
+  .box1 {
+    width: 66.21622%;
+    float: left;
+    margin-right: 1.35135%;
+  }
+
+  .box2 {
+    width: 32.43243%;
+    float: right;
+    margin-right: 0;
+  }
+
+  .box3 {
+    width: 32.43243%;
+    float: left;
+    margin-right: 1.35135%;
+  }
+
+  .box4 {
+    width: 66.21622%;
+    float: right;
+    margin-right: 0;
+  }
+
+  .box5 {
+    width: 48.97959%;
+    float: left;
+    margin-right: 2.04082%;
+  }
+
+  .box6 {
+    width: 48.97959%;
+    float: right;
+    margin-right: 0;
+  }
+}
+/* 데스크탑(Desktop) */
+@media (min-width: 1025px) {
+  body {
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  body:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+
+  .box {
+    height: 22rem;
+    line-height: 22rem;
+  }
+
+  .box1 {
+    width: 100%;
+    float: right;
+    margin-right: 0;
+  }
+
+  .box2 {
+    width: 15.58442%;
+    float: left;
+    margin-right: 1.2987%;
+  }
+
+  .box3 {
+    width: 66.23377%;
+    float: left;
+    margin-right: 1.2987%;
+  }
+
+  .box4 {
+    width: 15.58442%;
+    float: right;
+    margin-right: 0;
+  }
+
+  .box5 {
+    width: 66.23377%;
+    float: left;
+    margin-right: 1.2987%;
+  }
+
+  .box6 {
+    width: 32.46753%;
+    float: right;
+    margin-right: 0;
+  }
+}
