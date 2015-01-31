@@ -1,0 +1,21 @@
+/* 모바일 퍼스트 */
+html, a {
+  -webkit-font-smoothing: antialiased;
+  font-size: 16px;
+}
+
+/* 화면 폭 480px 이상 960px 미만 */
+@media (min-width: 480px) and (max-width: 959px) {
+  html {
+    font-size: 14px;
+  }
+}
+/* 화면 폭 960px 이상 */
+@media (min-width: 960px) {
+  html {
+    overflow-y: visible;
+  }
+}
+@media (min-width: 320px) and (max-width: 640px) {
+  /* 초기 설정 값을 변경하는 예 */
+}

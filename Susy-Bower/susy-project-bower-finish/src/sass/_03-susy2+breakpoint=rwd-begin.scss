@@ -1,0 +1,52 @@
+// ----------------------------------------
+// 라이브러리 호출
+// Bourbon    (http://bourbon.io)
+// Susy       (http://susy.oddbird.net/)
+// breakpoint (http://breakpoint-sass.com/)
+// ----------------------------------------
+@import "breakpoint/breakpoint";
+@import "bourbon/bourbon";
+@import "susy/susy";
+// -----------------------------------
+// 웹 폰트
+// -----------------------------------
+@import "http://fonts.googleapis.com/earlyaccess/nanumgothic.css";
+// -----------------------------------
+// 기본 스타일 코드
+// -----------------------------------
+html {
+	overflow-y: visible;
+	font-size: 10px;
+}
+body {
+	margin: 0;
+	font: 13px/1.5 "Nanum Gothic", Dotum, Sans-Serif;
+	letter-spacing: -0.02em;
+	word-spacing: 0.06em;
+	color: #585858;
+}
+h1, h2, h3, h4, h5, h6 {
+	margin-top: 0;
+	line-height: 1.4;
+	letter-spacing: -0.04em;
+}
+.box {
+	$h: 120px;
+	height: rem($h);
+	line-height: rem($h);
+	background: #4A89F2;
+	text-align: center;
+	color: #fff;
+}
+.box:nth-child(2n) {
+	background: #EFBB1D;
+	color: #613F0C;
+}
+// -----------------------------------
+// Susy2 + Breakpoint = RWD
+// -----------------------------------
+/* 모바일 퍼스트(Mobile First) */
+
+/* 태블릿(Tablet) */
+
+/* 데스크탑(Desktop) */
