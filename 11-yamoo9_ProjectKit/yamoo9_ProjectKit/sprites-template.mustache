@@ -1,0 +1,35 @@
+/*
+sprite- 접두사 뒤에 이미지 파일 명을 클래스 속성 값으로 부여합니다.
+
+[예시]
+이미지 파일 이름: bg-sea.png
+↓
+스프라이트 이미지 생성: sprites.png
+↓
+스프라이트 이미지 html 적용 코드
+<i class="sprite-icon-play">재생 버튼</i>
+<div class="sprite-bg-sea"></div>
+
+*/
+
+[class*="sprite-"] {
+  display: block;
+  overflow: hidden;
+  text-indent: -9999em;
+}
+
+/* 데스크탑 Windows 고대비 모드 웹 접근성 */
+.no-img [class*="sprite-"] {
+  overflow: visible;
+  text-indent: 0;
+}
+
+/* Sprites 이미지 자동 생성 코드 */
+{{#items}}
+.sprite-{{name}} {
+  width: {{px.width}};
+  height: {{px.height}};
+  background-image: url({{{escaped_image}}});
+  background-position: {{px.offset_x}} {{px.offset_y}};
+}
+{{/items}}
