@@ -1,8 +1,0 @@
-{
-	"output": "./dist",
-	"input": "./src",
-
-	"port": 90,
-	"livereload": true,
-	"browser": "chrome"
-}
