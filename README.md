@@ -75,7 +75,7 @@ $ gem install compass # Compass를 사용하고자 할 경우에만 설치
 
 ###### Gulp 업무(Tasks) 준비 및 유형별 실행
 ```sh
-$ gulp settings # Bower 컴포넌트 다운로드, 개발을 위한 설정
+$ gulp settings # Bower 컴포넌트 다운로드 등 개발을 위한 초기 설정
 $ gulp          # 프로젝트에 Jade, Sass, Coffee를 사용할 경우
 $ gulp www      # 프로젝트에 HTML, CSS, JS를 사용할 경우
 ```
