@@ -4,6 +4,7 @@
 # 모듈 호출
 config = require('../config')()
 csslintReporter = require('./util/customReporter').csslint
+checkExistVar = require('./util/checkExistVar')
 gulp   = require 'gulp'
 $      = require('gulp-load-plugins')(config.GLP_OPTION)
 
@@ -36,6 +37,9 @@ gulp.task 'css:move', ['css:lint'], ->
 	# global.build 값 설정이 없을 경우 off로 초기화
 	build = if global.build then global.build else off
 
+	# global.connecting 값 설정이 없을 경우 off로 초기화
+	connecting = checkExistVar(global.connecting)	
+
 	gulp.src(_CSS.src)
 		# # CSS3 브라우저 벤더 프리픽스 설정
 		.pipe $.autoprefixer(config.AUTOPREFIXER)
@@ -45,6 +49,8 @@ gulp.task 'css:move', ['css:lint'], ->
 		.pipe gulp.dest(_CSS.dest[0])
 		# 명령창에 파일 크기 출력
 		.pipe $.size(title: 'CSS 이동, 정렬: ')
+		# 출력된 결과 브라우저에 실시간 반영
+		.pipe $.if(connecting, global.connect.reload())
 
 # -----------------------------------------------------------------
 # 업무: CSS 파일 처리
@@ -52,6 +58,9 @@ gulp.task 'css:concat', ['css:move'], ->
 
 	# global.build 값 설정이 없을 경우 off로 초기화
 	build = if global.build then global.build else off
+
+	# global.connecting 값 설정이 없을 경우 off로 초기화
+	connecting = checkExistVar(global.connecting)
 
 	gulp.src(_CSS.dest[1])
 		# CSS 병합
@@ -62,3 +71,5 @@ gulp.task 'css:concat', ['css:move'], ->
 		.pipe gulp.dest(_CSS.build)
 		# 명령창에 파일 크기 출력
 		.pipe $.size(title: 'CSS 병합, 압축: ')
+		# 출력된 결과 브라우저에 실시간 반영
+		.pipe $.if(connecting, global.connect.reload())

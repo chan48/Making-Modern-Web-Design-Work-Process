@@ -17,7 +17,7 @@ _JS           = config.JS
 gulp.task 'js', ->
 
 	# global.build 값 설정이 없을 경우 off로 초기화
-	build = checkExistVar(global.build)
+	# build = checkExistVar(global.build)
 
 	runSequence 'js:move', 'js:concat'
 	# if !build then gulp.start 'js:move' else gulp.start 'js:concat'
@@ -38,12 +38,16 @@ gulp.task 'js:move', ['js:hint'], ->
 
 	# global.build 값 설정이 없을 경우 off로 초기화
 	build = checkExistVar(global.build)
+	# global.connecting 값 설정이 없을 경우 off로 초기화
+	connecting = checkExistVar(global.connecting)	
 
 	gulp.src(_JS.src)
 		# 이동
 		.pipe gulp.dest(_JS.dest[0])
 		# 명령창에 파일 크기 출력
 		.pipe $.size(title: 'JS 이동: ')
+		# 출력된 결과 브라우저에 실시간 반영
+		# .pipe $.if(connecting, global.connect.reload())
 
 # ---------------------------------------------------------------
 # 업무: JS 파일 병합/압축
@@ -51,6 +55,8 @@ gulp.task 'js:concat', ->
 
 	# global.build 값 설정이 없을 경우 off로 초기화
 	build = checkExistVar(global.build)
+	# global.connecting 값 설정이 없을 경우 off로 초기화
+	connecting = checkExistVar(global.connecting)
 
 	gulp.src(_JS.dest[1])
 		# JS 병합
@@ -61,3 +67,5 @@ gulp.task 'js:concat', ->
 		.pipe $.if(!build, gulp.dest(_JS.dest[0]), gulp.dest(_JS.build))
 		# 명령창에 파일 크기 출력
 		.pipe $.size(title: 'JS 병합, 압축: ')
+		# 출력된 결과 브라우저에 실시간 반영
+		# .pipe $.if(connecting, global.connect.reload())

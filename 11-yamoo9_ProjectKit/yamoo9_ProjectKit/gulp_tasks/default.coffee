@@ -7,12 +7,12 @@ runSequence = require 'run-sequence'
 
 # 업무: 초기 설정(Prepare Setting)
 # 주의! settings를 먼저 수행해야 합니다.
-gulp.task 'settings', ['clean', 'bower', 'images', 'sprites']
+gulp.task 'settings', ['clean', 'bower'] # 'images', 'sprites'
 
 # ------------------------------------------------------------------------------------------------
 
 # 업무: 기본(default)
-gulp.task 'default', ['jade', 'sass', 'coffee', 'js', 'connect', 'watch']
+gulp.task 'default', ['jade', 'sass', 'coffee', 'js', 'fontawesome:move', 'connect', 'watch']
 
 # ------------------------------------------------------------------------------------------------
 

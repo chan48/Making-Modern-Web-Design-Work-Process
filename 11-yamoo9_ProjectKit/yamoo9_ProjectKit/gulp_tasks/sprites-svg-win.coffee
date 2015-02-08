@@ -15,7 +15,7 @@ _sprite       = config.sprite.SVG
 
 # 업무: SVG 스프라이트 이미지/스타일 문서 자동 생성 및 이동
 gulp.task 'sprites:svg-win', ['sprites:svg-generate-win'], ->
-	gulp.start 'sprites:svg-move-win'
+	# gulp.start 'sprites:svg-move-win'
 
 
 # --------------------------------------------------------------------------------------
