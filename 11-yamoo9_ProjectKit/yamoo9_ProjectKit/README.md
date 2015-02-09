@@ -64,20 +64,20 @@ $ gem -v         # Gem 버전 확인
 ```sh
 $ npm install --global gulp # npm i -g gulp
 ```
-![Gulp.js 전역 설치](./gif_images/node_gulp.gif?raw=true)
+![Gulp.js 전역 설치](./gif_images/npm_gulp.gif?raw=true)
 
 ###### [Bower](http://bower.io) 전역 설치
 ```sh
 $ npm install --global bower # npm i -g bower
 ```
-![Bower 전역 설치](./gif_images/node_bower.gif?raw=true)
+![Bower 전역 설치](./gif_images/npm_bower.gif?raw=true)
 
 ###### 프로젝트 의존 모듈 설치 (NPM, Bower)
 ```sh
 $ npm install   # npm i
 $ bower install # bower i
 ```
-![NPM & Bower 로컬 설치](./gif_images/node_bower_install.gif?raw=true)
+![NPM & Bower 로컬 설치](./gif_images/npm_bower_install.gif?raw=true)
 
 ###### Sass 모듈 설치 (Ruby 환경 Sass를 사용할 경우)
 ```sh
