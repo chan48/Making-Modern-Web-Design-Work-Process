@@ -86,6 +86,7 @@ $ gulp www      # 프로젝트에 HTML, CSS, JS를 사용할 경우
 ```sh
 $ gulp settings # Bower 컴포넌트 다운로드, 개발을 위한 설정
 ```
+![gulp settings demo](./gif_images/gulp-settings.gif?raw=true)
 
 ###### 기본(default) & 웹(www)<br>
 ```sh
