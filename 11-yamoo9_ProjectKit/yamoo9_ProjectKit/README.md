@@ -53,10 +53,10 @@ Node.js와 Ruby 환경에서 작동하는 yamoo9_ProjectKit은 컴퓨터에 Node
 
 ###### Node.js & Ruby 설치 확인
 ```sh
-$ node -v # Node.js 설치 및 버전 확인
-$ ruby -v  # Ruby 설치 및 버전 확인
-$ npm -v  # NPM 버전 확인
-$ gem -v  # Gem 버전 확인
+$ node --version # Node.js 설치 및 버전 확인
+$ ruby -v        # Ruby 설치 및 버전 확인
+$ npm -v         # NPM 버전 확인
+$ gem -v         # Gem 버전 확인
 ```
 ![Node.js & Ruby 버전 확인](./gif_images/node_ruby_confirm.gif?raw=true)
 
