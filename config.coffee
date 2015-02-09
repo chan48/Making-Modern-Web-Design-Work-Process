@@ -241,11 +241,12 @@ module.exports = ->
 			defaultEncoding : 'utf-8'
 			noCache         : false
 			cacheLocation   : cache
-			# loadPath        : [bower_path, "#{source}#{sass}"]
+			loadPath        : [bower_path, "#{source}#{sass}"]
 			precision       : 2
 		buildOption : # 빌드 옵션
 			style           : 'compressed'
 			sourcemap       : false
+			defaultEncoding : 'utf-8'
 
 	# 사용하고자 하는 Sass 엔진 초기 값 설정 (rubySass, nodeSass)
 	# 명령 창에서 변경하고자 할 경우에는 sass=ruby 또는 sass=node 입력 후, gulp 업무 실행

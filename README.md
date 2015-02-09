@@ -51,27 +51,40 @@ Node.js와 Ruby 환경에서 작동하는 yamoo9_ProjectKit은 컴퓨터에 Node
 =
 #### yamoo9_ProjectKit 시작하기
 
+###### Node.js & Ruby 설치 확인
+```sh
+$ node --version # Node.js 설치 및 버전 확인
+$ ruby -v        # Ruby 설치 및 버전 확인
+$ npm -v         # NPM 버전 확인
+$ gem -v         # Gem 버전 확인
+```
+![Node.js & Ruby 버전 확인](./gif_images/node_ruby_confirm.gif?raw=true)
+
 ###### [Gulp.js](http://gulpjs.com) 전역(Global) 설치
 ```sh
 $ npm install --global gulp # npm i -g gulp
 ```
+![Gulp.js 전역 설치](./gif_images/npm_gulp.gif?raw=true)
 
 ###### [Bower](http://bower.io) 전역 설치
 ```sh
 $ npm install --global bower # npm i -g bower
 ```
+![Bower 전역 설치](./gif_images/npm_bower.gif?raw=true)
 
 ###### 프로젝트 의존 모듈 설치 (NPM, Bower)
 ```sh
 $ npm install   # npm i
 $ bower install # bower i
 ```
+![NPM & Bower 로컬 설치](./gif_images/npm_bower_install.gif?raw=true)
 
 ###### Sass 모듈 설치 (Ruby 환경 Sass를 사용할 경우)
 ```sh
 $ gem install sass    # Ruby Sass 설치
 $ gem install compass # Compass를 사용하고자 할 경우에만 설치
 ```
+![Sass 설치](./gif_images/gem_sass.gif?raw=true)
 
 ###### Gulp 업무(Tasks) 준비 및 유형별 실행
 ```sh
@@ -86,12 +99,15 @@ $ gulp www      # 프로젝트에 HTML, CSS, JS를 사용할 경우
 ```sh
 $ gulp settings # Bower 컴포넌트 다운로드, 개발을 위한 설정
 ```
+![gulp settings demo](./gif_images/gulp-settings.gif?raw=true)
 
 ###### 기본(default) & 웹(www)<br>
 ```sh
 $ gulp          # 프로젝트에 Jade, Sass, Coffee를 사용할 경우
 $ gulp www      # 프로젝트에 HTML, CSS, JS를 사용할 경우
 ```
+![gulp demo](./gif_images/gulp.gif?raw=true)
+
 ###### 제거(clean)
 ```sh
 $ gulp clean          # 생성된 개발,빌드,캐시 폴더 모두 제거
@@ -100,6 +116,8 @@ $ gulp clean:develop  # config.dev 개발 폴더 개별 제거
 $ gulp clean:all      # 개발,빌드,캐시,bower_component 모두 제거
 $ gulp clean:reset    # 프로젝트 폴더 초기화(node_modules 포함 모두 제거)
 ```
+![gulp clean demo](./gif_images/gulp-clean.gif?raw=true)
+
 ###### 관찰(watch)
 ```sh
 $ gulp watch        # Jade,Sass,Coffee,HTML,CSS,JS 모두 관찰
@@ -111,6 +129,8 @@ $ gulp watch:html   # HTML 변경 내용 관찰
 $ gulp watch:css    # CSS 변경 내용 관찰
 $ gulp watch:js     # JS 변경 내용 관찰
 ```
+![gulp watch demo](./gif_images/gulp-watch.gif?raw=true)
+
 ###### 빌드(build)
 ```sh
 $ gulp build         # 통합
@@ -121,14 +141,20 @@ $ gulp build:images  # 이미지 압축/스프라이트 개별 빌드
 $ gulp build:css     # CSS 개별 빌드
 $ gulp build:js      # JS 개별 빌드
 ```
+![gulp build demo](./gif_images/gulp-build.gif?raw=true)
+
 ###### 웹 서버(connect)
 ```sh
 $ gulp connect # 웹 서버 환경 설정 후, 브라우저 오픈
 ```
+![웹 서버 테스트 실행](./gif_images/gulp_connect.gif?raw=true)
+
 ###### Jade 템플릿 엔진 `Jade → HTML`
 ```sh
 $ gulp jade
 ```
+![Jade 컴파일 실행](./gif_images/gulp_jade.gif?raw=true)
+
 ###### Sass 프리프로세싱 `Sass → CSS`
 `sass=node` 또는 `sass=ruby` 명령어로 Sass 엔진을 선택할 수 있습니다.
 엔진 기본 값을 변경하려면 `config.coffee` 파일을 열어 `SASSENGINE` 설정 값(초기값: `ruby`)을 변경합니다.
@@ -136,10 +162,14 @@ $ gulp jade
 $ gulp sass
 $ sass=node gulp sass  # LibSass(NodeSass) 활용 예
 ```
+![Sass 컴파일 실행](./gif_images/gulp_sass.gif?raw=true)
+
 ###### CoffeeScript 컴파일 `CoffeeScript → Javascript`
 ```sh
 $ gulp coffee
 ```
+![CoffeeScript 컴파일 실행](./gif_images/gulp_coffee.gif?raw=true)
+
 ###### 이미지 최적화 / SVG → PNG 자동 변환
 ```sh
 $ gulp images          # 통합
