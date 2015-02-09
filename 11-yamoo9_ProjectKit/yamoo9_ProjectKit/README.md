@@ -64,23 +64,27 @@ $ gem -v         # Gem 버전 확인
 ```sh
 $ npm install --global gulp # npm i -g gulp
 ```
+![Gulp.js 전역 설치](./gif_images/node_gulp.gif?raw=true)
 
 ###### [Bower](http://bower.io) 전역 설치
 ```sh
 $ npm install --global bower # npm i -g bower
 ```
+![Bower 전역 설치](./gif_images/node_bower.gif?raw=true)
 
 ###### 프로젝트 의존 모듈 설치 (NPM, Bower)
 ```sh
 $ npm install   # npm i
 $ bower install # bower i
 ```
+![NPM & Bower 로컬 설치](./gif_images/node_bower_install.gif?raw=true)
 
 ###### Sass 모듈 설치 (Ruby 환경 Sass를 사용할 경우)
 ```sh
 $ gem install sass    # Ruby Sass 설치
 $ gem install compass # Compass를 사용하고자 할 경우에만 설치
 ```
+![Sass 설치](./gif_images/gem_sass.gif?raw=true)
 
 ###### Gulp 업무(Tasks) 준비 및 유형별 실행
 ```sh
@@ -143,6 +147,8 @@ $ gulp build:js      # JS 개별 빌드
 ```sh
 $ gulp connect # 웹 서버 환경 설정 후, 브라우저 오픈
 ```
+![웹 서버 테스트 실행](./gif_images/gulp_connect.gif?raw=true)
+
 ###### Jade 템플릿 엔진 `Jade → HTML`
 ```sh
 $ gulp jade
