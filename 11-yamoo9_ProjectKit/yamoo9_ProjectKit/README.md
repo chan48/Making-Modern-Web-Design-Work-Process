@@ -93,6 +93,8 @@ $ gulp settings # Bower 컴포넌트 다운로드, 개발을 위한 설정
 $ gulp          # 프로젝트에 Jade, Sass, Coffee를 사용할 경우
 $ gulp www      # 프로젝트에 HTML, CSS, JS를 사용할 경우
 ```
+![gulp demo](./gif_images/gulp.gif?raw=true)
+
 ###### 제거(clean)
 ```sh
 $ gulp clean          # 생성된 개발,빌드,캐시 폴더 모두 제거
@@ -101,6 +103,8 @@ $ gulp clean:develop  # config.dev 개발 폴더 개별 제거
 $ gulp clean:all      # 개발,빌드,캐시,bower_component 모두 제거
 $ gulp clean:reset    # 프로젝트 폴더 초기화(node_modules 포함 모두 제거)
 ```
+![gulp clean demo](./gif_images/gulp-clean.gif?raw=true)
+
 ###### 관찰(watch)
 ```sh
 $ gulp watch        # Jade,Sass,Coffee,HTML,CSS,JS 모두 관찰
@@ -112,6 +116,8 @@ $ gulp watch:html   # HTML 변경 내용 관찰
 $ gulp watch:css    # CSS 변경 내용 관찰
 $ gulp watch:js     # JS 변경 내용 관찰
 ```
+![gulp watch demo](./gif_images/gulp-watch.gif?raw=true)
+
 ###### 빌드(build)
 ```sh
 $ gulp build         # 통합
@@ -122,6 +128,8 @@ $ gulp build:images  # 이미지 압축/스프라이트 개별 빌드
 $ gulp build:css     # CSS 개별 빌드
 $ gulp build:js      # JS 개별 빌드
 ```
+![gulp build demo](./gif_images/gulp-build.gif?raw=true)
+
 ###### 웹 서버(connect)
 ```sh
 $ gulp connect # 웹 서버 환경 설정 후, 브라우저 오픈
