@@ -153,6 +153,8 @@ $ gulp connect # 웹 서버 환경 설정 후, 브라우저 오픈
 ```sh
 $ gulp jade
 ```
+![Jade 컴파일 실행](./gif_images/gulp_jade.gif?raw=true)
+
 ###### Sass 프리프로세싱 `Sass → CSS`
 `sass=node` 또는 `sass=ruby` 명령어로 Sass 엔진을 선택할 수 있습니다.
 엔진 기본 값을 변경하려면 `config.coffee` 파일을 열어 `SASSENGINE` 설정 값(초기값: `ruby`)을 변경합니다.
@@ -160,10 +162,14 @@ $ gulp jade
 $ gulp sass
 $ sass=node gulp sass  # LibSass(NodeSass) 활용 예
 ```
+![Sass 컴파일 실행](./gif_images/gulp_sass.gif?raw=true)
+
 ###### CoffeeScript 컴파일 `CoffeeScript → Javascript`
 ```sh
 $ gulp coffee
 ```
+![CoffeeScript 컴파일 실행](./gif_images/gulp_coffee.gif?raw=true)
+
 ###### 이미지 최적화 / SVG → PNG 자동 변환
 ```sh
 $ gulp images          # 통합
