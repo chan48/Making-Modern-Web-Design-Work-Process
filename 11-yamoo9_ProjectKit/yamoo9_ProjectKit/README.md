@@ -176,6 +176,10 @@ $ gulp images          # 통합
 $ gulp images:svg2png  # SVG → PNG 변환 ($ gulp svg2png 명령도 가능)
 $ gulp images:opt      # 최적화
 ```
+![이미지 최적화 실행](./gif_images/gulp-images-opt.gif?raw=true)
+
+![SVG → PNG 변환 실행](./gif_images/gulp-images-svg2png.gif?raw=true)
+
 ###### 스프라이트 이미지/CSS 스타일 자동 생성 (`PNG`, `SVG`)
 ```sh
 $ gulp sprites         # 통합 (sprites:svg-win 또는 sprites:svg 중 선택)
@@ -183,6 +187,10 @@ $ gulp sprites:png     # PNG 스프라이트 생성
 $ gulp sprites:svg-win # Windows 환경: SVG 스프라이트 생성(Fallback: SVG → PNG 변환 포함)
 $ gulp sprites:svg     # OSX 환경: SVG 스프라이트 생성(Fallback: SVG → PNG 변환 포함)
 ```
+![PNG 스프라이트 이미지 자동 생성](./gif_images/gulp-sprites-png.gif?raw=true)
+
+![SVG 스프라이트 이미지 자동 생성](./gif_images/gulp-sprites-svg-win.gif?raw=true)
+
 ###### HTML 업무
 ```sh
 $ gulp html # 이동, 압축
