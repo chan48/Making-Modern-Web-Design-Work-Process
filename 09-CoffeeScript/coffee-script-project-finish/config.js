@@ -16,7 +16,7 @@ module.exports = function() {
 		// Sass 설정
 		sass = {
 			src        : source + 'sass/**/*.{scss,sass}',
-			compassSrc : source + '/sass',
+			compassSrc : source + 'sass',
 			dest       : development + 'css/'
 		},
 
