@@ -2,6 +2,8 @@
 __[만들면서 배우는 모던 웹사이트 제작 워크프로세스](http://yamoo9.net/book-2nd/)__ `도서 예제`<br>
 저자 [야무(지훈)](http://yamoo9.net), 2015 [한빛미디어](http://hanb.co.kr) 출간<br>
 
+<img src="Assets/cover.png" alt="만들면서 배우는 모던 웹사이트 제작" width="40%">
+
 -
 <h3 title="소개">Introduction</h3>
 
@@ -27,11 +29,14 @@ __[만들면서 배우는 모던 웹사이트 제작 워크프로세스](http://
 11. __yamoo9_ProjectKit__ `Front-End 프로젝트 개발도구`
 
 -
+![만들면서 배우는 모던 웹사이트 제작](Assets/chapters.jpg)
+
+-
 <h3 title="예제 다운로드">Download Examples</h3>
 
 - __모든 예제 다운로드__
   - [ChapterAll.zip](https://github.com/yamoo9/Making-Modern-Web-Design-Work-Process/archive/master.zip)
-  
+
 - __각 장 예제 개별 다운로드__
   - [Chapter01.zip](https://github.com/yamoo9/Making-Modern-Web-Design-Work-Process/archive/SublimeText.zip)
   - [Chapter02.zip](https://github.com/yamoo9/Making-Modern-Web-Design-Work-Process/archive/Git-GitHub-Gist.zip)
