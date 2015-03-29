@@ -1,1 +1,0 @@
-### scripts.coffee, 2015 @ yamoo9.net ###
