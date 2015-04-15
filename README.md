@@ -1,8 +1,8 @@
 ## Modern Work Process of Making Website
-__[만들면서 배우는 모던 웹사이트 제작 워크프로세스](http://yamoo9.net/book-2nd/)__ `도서 예제`<br>
+__[만들면서 배우는 모던 웹사이트 제작 워크프로세스](http://www.yes24.com/24/goods/17552667)__ `도서 예제`<br>
 저자 [야무(지훈)](http://yamoo9.net), 2015 [한빛미디어](http://hanb.co.kr) 출간<br>
 
-<img src="Assets/cover.png" alt="만들면서 배우는 모던 웹사이트 제작" width="40%">
+<img src="Assets/book-cover.jpg" alt="만들면서 배우는 모던 웹사이트 제작">
 
 -
 <h3 title="소개">Introduction</h3>
