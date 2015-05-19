@@ -1,0 +1,87 @@
+body {
+	margin: 0;
+	font: 1rem/1.5 "Nanum Gothic", Dotum;
+	background: hsla(357, 97%, 62%, 1);
+}
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+/* HEADER */
+header {
+	padding: .8em 1em;
+	background-color: #FC414B;
+	color: #fff;
+}
+
+header h1 {
+	overflow: hidden;
+	margin: 0;
+	font-size: 1.125rem;
+}
+
+header h1 img {
+	float: left;
+	margin-right: 8px;
+}
+
+/* BUTTON */
+button {
+	outline: none;
+	cursor: pointer;
+	padding: .5em;
+	width: 8em;
+	border: none;
+	background-color: #E42739;
+	color: #fff;
+}
+button:hover, button:focus {
+	background-color: #950C1F;
+}
+button:active {
+	position: relative;
+	top: 1px;
+}
+
+/* .TOOLBAR */
+.toolbar {
+	overflow: hidden;
+	background-color: #FC4A54;
+	border-color: #CF0020;
+	border-style: solid;
+	border-width: 1px 0;
+	/*padding: .2em 1em;*/
+}
+
+.toolbar button {
+	float: left;
+	width: 25%;
+}
+
+/* .CONTENT */
+.content {
+	background-color: #DA0027;
+}
+
+#log-list {
+	font-size: .8em;
+	color: #777;
+}
+
+.task {
+	padding: .4em 1em;
+	border-top: 1px dashed #444;
+}
+
+.task:first-child {
+	border: none;
+}
+
+.task .description {
+	width: 40%;
+	padding: .5em;
+	border: 1px solid;
+}

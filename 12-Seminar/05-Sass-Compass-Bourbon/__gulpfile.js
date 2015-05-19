@@ -8,6 +8,17 @@
 var gulp = require('gulp'),
 	jade = require('gulp-jade');
 
+/**
+ * --------------------------------
+ * CONFIGURATIONS
+ * --------------------------------
+ */
+var config = {
+	jade: {
+		src: './src/jade/**/*.jade',
+		dist: './dist/'
+	}
+};
 
 /**
  * --------------------------------
@@ -17,11 +28,13 @@ var gulp = require('gulp'),
 gulp.task('default', ['jade']);
 
 gulp.task('watch', function(){
-	gulp.watch(['src/jade/**/*.jade'], ['jade']);
+	gulp.watch([config.jade.src], ['jade']);
 });
 
 gulp.task('jade', function(){
-	gulp.src('src/jade/**/*.jade')
-		.pipe(jade())
-		.pipe(gulp.dest('dist/'));
+	gulp.src(config.jade.src)
+		.pipe(jade({
+			pretty: true
+		}))
+		.pipe(gulp.dest(cofig.jade.dist));
 });

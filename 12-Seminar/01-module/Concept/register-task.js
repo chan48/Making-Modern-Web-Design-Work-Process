@@ -13,7 +13,7 @@
  * 모듈 호출(요구)
  * --------------------------------
  */
-var customModule = require('./custom-module.js');
+var customModule = require('./custom-module');
 
 /**
  * 모듈 사용(활용)
