@@ -9,14 +9,18 @@
  * --------------------------------
  */
 
+var cm = require('./custom-module');
+
+cm();
+
 /**
  * 모듈 호출(요구)
  * --------------------------------
  */
-var customModule = require('./custom-module');
+// var customModule = require('./custom-module');
 
 /**
  * 모듈 사용(활용)
  * --------------------------------
  */
-customModule();
+// customModule();

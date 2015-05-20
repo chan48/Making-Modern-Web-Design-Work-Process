@@ -1,0 +1,23 @@
+{
+  "name"       : "iy-ssi-sass-project",
+  "version"    : "0.0.1",
+  "description": "SSI, Sass 프로젝트 관리",
+  "main"       : "gulpfile.js",
+  "dependencies": {
+    "gulp": "^3.8.11",
+    "gulp-html-ssi": "^0.0.92",
+    "gulp-ruby-sass": "^1.0.5",
+    "gulp-sourcemaps": "^1.5.2"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/JeongInyoung/work"
+  },
+  "keywords": [
+    "ssi",
+    "sass"
+  ],
+  "author": "inyoung",
+  "license": "ISC"
+}
